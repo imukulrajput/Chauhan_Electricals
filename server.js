@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const cros = require("cros");
+const cors = require("cors");
 
 dotenv.config();
 
@@ -18,7 +18,7 @@ const connectDB = require("./config/dbconfig");
 
 const app = express();
 
-app.use(cros());
+app.use(cors());
 app.use(express.json());
 connectDB();
 const PORT = 8080;
